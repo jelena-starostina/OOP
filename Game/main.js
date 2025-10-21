@@ -5,6 +5,7 @@ const readLineSync = require('readline-sync');
 
 //Импортируем игровые модули
 const runGuessTheNumber = require('./guess-the-number/game');
+const runTicTacToe = require('./tic-tac-toe/game');
 
 //Контроллер игрового цикла
 //Game loop controller
@@ -20,7 +21,8 @@ while (keepPlaying) {
     console.log("Which game mode do you want to play?");
 
     const games = [
-        'Guess the Number'
+        'Guess the Number',
+        'Tic Tac Toe'
     ];
 
     //Отображаем боступные игры
@@ -31,6 +33,9 @@ while (keepPlaying) {
         case 0:
           runGuessTheNumber();
             break;
+            case 1:
+                runTicTacToe();
+                break;
             //дальше будет добавляться новые игры
             default:
                 console.log("Exiting the game. Goodbye!");
